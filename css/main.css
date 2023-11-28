@@ -1,174 +1,176 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
 body {
-  background-image: url(/pf/img/overlay.gif);
+  background: rgb(92, 92, 99);
+  background: linear-gradient(35deg, rgba(92, 92, 99, 1) 0%, rgba(152, 143, 143, 1) 33%, rgba(92, 92, 99, 1) 100%);
 }
 .openTabVertical {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 .openTabVertical .tab {
-  width: 80%;
-  height: 90px;
+  width: 120px;
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
   text-align: center;
-  padding-bottom: 50px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: absolute;
+  left: 30px;
+  z-index: 10;
 }
 .tabButton {
-  width: 60%;
-  height: 100%;
+  width: 100%;
   font-weight: 700;
-  line-height: 120px;
-  padding: 0px 16px;
-  color: #fff;
   font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  padding: 20px 0;
   position: relative;
   cursor: pointer;
+}
+.tabButton:nth-child(1) {
+  font-size: 28px;
+  font-family: 'Ephesis', cursive;
+}
+.tabButton:nth-child(1).on {
+  text-underline-offset: 18px;
+}
+.tabButton:nth-child(2).on {
+  text-underline-offset: 5px;
 }
 .tabButton.on {
   color: #1E88E5;
   text-decoration: underline;
   text-underline-offset: 10px;
 }
-.mobile {
-  display: none;
-}
 .openTabVertical .contents {
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
-  height: 60vh;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 40px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-  padding: 60px;
+  height: 80vh;
   margin: 0 auto;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .contents .tabBox {
   width: 100%;
   height: 100%;
   display: none;
   color: #000;
+  padding: 100px 80px;
 }
 .contents .tabBox.on {
   display: block;
 }
-.home {
-  width: 100%;
-  height: 120px;
-  margin: 0 auto;
-  text-align: center;
-  overflow: hidden;
-}
-.home h2:first-child {
-  color: #96e6a1;
-  font-size: 28px;
-  margin: 0 auto 30px;
-  overflow: hidden;
-  width: 150px;
-  animation: type 1.3s steps(40, end) forwards;
-}
-.home h2:last-child {
-  opacity: 0;
-  background: linear-gradient(to right top, #84fab0, #8fd3f4);
-  color: transparent;
-  -webkit-background-clip: text;
-  margin: 0 auto auto;
-  font-weight: 700;
-  font-size: 60px;
-  width: 700px;
-  overflow: hidden;
-  animation: type2 1.8s steps(40, end) 2s forwards, blink .5s step-end infinite alternate;
-}
+
 .AboutBox {
   opacity: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 4%;
   margin: 0 auto;
-  align-content: center;
-  animation: fadein 1s steps(40, end) 4s forwards, blink .5s step-end infinite alternate;
+  animation: fadein 1s steps(40, end) forwards, blink .5s step-end infinite alternate;
   ;
 }
-.AboutBox li {
-  width: 48%;
+.AboutBox .AboutBox-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.AboutBox li h2 {
+.home h2:first-child {
+  width: 290px;
+  height: 28px;
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  animation: type 1.3s steps(40, end) forwards;
+}
+.home h2:last-child {
+  opacity: 0;
+  width: 480px;
+  height: 42px;
+  font-weight: 700;
+  font-size: 40px;
+  overflow: hidden;
+  animation: type2 1.8s steps(40, end) 2s forwards, blink .5s step-end infinite alternate;
+}
+.AboutBox-l .skill-box h2 {
   font-weight: 700;
   font-size: 24px;
-  color: #42A5F5;
+  color: #1E88E5;
   margin-bottom: 20px;
 }
-.AboutBox li p {
-  font-weight: 700;
-  font-size: 20px;
-  color: #999;
+.AboutBox div ul {
   display: flex;
-  margin-bottom: 20px;
+  gap: 20px;
 }
-.AboutBox li p span:first-child {
-  width: 90px;
-}
-.AboutBox li p span:last-child {
-  font-weight: 400;
-  font-size: 16px;
-}
-.AboutBox li:last-child > ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4%;
-  row-gap: 20px;
-}
-.AboutBox li:last-child > ul li {
-  width: 48%;
-  height: 24px;
-  display: flex;
-  gap: 10px;
-}
-.AboutBox li:last-child > ul li span {
-  font-size: 18px;
-}
-.AboutBox li:last-child > ul li img {
-  width: 24px;
-  height: 24px;
+.AboutBox div ul li img {
+  width: 40px;
+  height: 40px;
 }
 .tabBox.on .web {
   animation: fadeInUp 0.5s steps(40, end) forwards
 }
 .web {
-  padding-top: 60px;
-  display: flex;
-  gap: 5%;
+  width: 100%;
 }
 .web .web-con {
-  width: 48%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 60px;
 }
 .web .web-tit {
+  width: 100%;
   display: flex;
-  gap: 7%;
+  justify-content: center;
+  gap: 15%;
 }
 .web .web-tit img {
   width: 54px;
   height: 54px;
 }
-.web .web-tit h2 {
+.tabButton2 {
   font-weight: 700;
   font-size: 40px;
-  color: #42A5F5;
+  position: relative;
+  cursor: pointer;
+}
+.tabButton2.on {
+  color: #1E88E5;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+.web-con .tabBox2 {
+  opacity: 0;
+  display: none;
+}
+.tabBox2.on {
+  display: block;
+  display: flex;
+  gap: 80px;
+  animation: fadeInRight 0.5s steps(40, end)forwards
 }
 .web .web-con .web-txt {
-  color: #7d7d7d;
-  font-size: 18px;
   display: flex;
   flex-direction: column;
+  width: 48%;
+  font-size: 18px;
 
 }
 .web .web-con .web-txt li {
@@ -177,29 +179,33 @@ body {
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   padding: 15px;
 }
-.web .web-con .web-txt li:last-child {
+.web .web-con .web-txt .web-txt-box li:last-child {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
-.web .web-con .web-txt li p {
+.web .web-con .web-txt p {
+  color: #333;
   line-height: 24px;
   margin-bottom: 30px;
 }
 .web .web-con .web-txt li h3 {
-  color: #42A5F5;
+  color: #1E88E5;
   font-size: 22px;
 }
 .web .web-con .web-txt li span {
   color: #000;
+  align-self: center;
 }
+
 .web .web-con .web-btn {
   display: flex;
   gap: 4%;
+  padding-top: 30px;
 }
 .web .web-con .web-btn li {
   width: 48%;
   text-align: center;
   background: #1E88E5;
-  color: #fff;
+  border: none;
 }
 .web .web-con .web-btn li:hover {
   background: #222;
@@ -213,150 +219,91 @@ body {
 .web .web-con .web-btn li a span {
   font-weight: 700;
   font-size: 18px;
+  color: #fff;
 }
+
 .web .web-img {
   width: 48%;
-  height: 250px;
-  padding-top: 150px;
-  overflow: hidden;
+  align-self: center;
 }
-.web .web-img a img {
-  width: 100%;
-  height: 800px;
-  transition: all 1s;
-  object-fit: cover;
-  object-position: top;
+.web-img .tabButton3 + .tabButton3 {
+  padding-top: 20px;
 }
-.web .web-img:hover a img {
-  width: 100%;
-  max-width: 570px;
-  height: 250px;
-  margin-bottom: 25px;
-}
-.web .web-img a img:hover {
-  transition: all 1.5s;
-  object-position: bottom;
-}
-.tabBox.on .clone-wrap {
-  animation: fadeInUp 0.5s steps(40, end) forwards
-}
-.clone-wrap {
-  padding-top: 30px;
-  display: flex;
-  gap: 8%;
-}
-.clone-wrap .clone-left {
-  width: 48%;
-}
-.clone-wrap .clone-left h2 {
-  font-weight: 700;
-  font-size: 36px;
-  color: #42A5F5;
-  padding-bottom: 240px;
-}
-.clone-wrap .clone-left p {
-  font-size: 24px;
-  line-height: 30px;
-  color: #888;
-}
-.clone-wrap .clone-right {
-  width: 48%;
-}
-.clone-wrap .clone-right li div {
+.web-img .tabButton3 h2 {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-}
-.clone-wrap .clone-right li div h2 {
   font-weight: 700;
   font-size: 28px;
-  color: #42A5F5;
+  padding-bottom: 20px;
+  cursor: pointer;
 }
-.clone-wrap .clone-right li div span {
-  font-size: 18px;
-  line-height: 28px;
-  color: rgba(0, 0, 0, 0.5);
+.web-img .tabButton3.on h2 {
+  color: #1E88E5;
 }
-.clone-wrap .clone-right li a {
-  display: block;
-  width: 100%;
-  height: 250px;
+.web-img .tabButton3.on i {
+  font-weight: 700;
+  transform: rotate(180deg);
+}
+.web-img .tabBox3 {
+  height: 200px;
   overflow: hidden;
+  display: none;
 }
-.clone-wrap .clone-right li a img {
+.web-img .tabBox3.on {
+  display: block;
+}
+.web-img a img {
   width: 100%;
-  height: 800px;
+  height: 200px;
   transition: all 1s;
   object-fit: cover;
   object-position: top;
 }
-.clone-wrap .clone-right li:hover a img {
+.web-img:hover a img {
   width: 100%;
-  max-width: 570px;
-  height: 250px;
-  margin-bottom: 25px;
+  height: 200px;
 }
-.clone-wrap .clone-right li a img:hover {
+.web-img a img:hover {
   transition: all 1.5s;
   object-position: bottom;
+}
+.tabBox2:nth-child(2) .web-img a .mid-img {
+  transition: all 3s;
+}
+.tabBox2:nth-child(3) .web-img a .mid-img {
+  transition: all 3s;
+}
+.tabBox2:nth-child(3) .web-img a .long-img {
+  transition: all 4.5s;
 }
 .tabBox.on .me-box {
   animation: fadein 1s steps(40, end) forwards
 }
-.me-box {
+.tabBox:last-child {
+  position: relative;
+}
+.tabBox:last-child .me-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 30px;
+  gap: 100px;
   width: 100%;
   height: 100%;
+  padding-top: 100px;
 }
-.me-box li {
-  display: flex;
-  gap: 20px;
-  width: 250px;
+.me-box li i {
+  font-size: 200px;
 }
 .me-box li span {
-  font-size: 28px;
+  font-size: 40px;
 }
-.concept {
-  width: 100vw;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @keyframes type {
   0% {
     width: 0;
   }
   1%, 99% {
-    border-right: 1px solid #96e6a1;
+    border-right: 1px solid #000;
   }
   100% {
     border-right: none;
@@ -367,13 +314,9 @@ body {
     opacity: 0;
     width: 0;
   }
-  1% {
+  1%, 99% {
     opacity: 1;
-    border-right: 1px solid #84fab0;
-  }
-  50% {
-    opacity: 1;
-    border-right: 1px solid #8fd3f4;
+    border-right: 1px solid #000;
   }
   100% {
     opacity: 1;
@@ -391,10 +334,294 @@ body {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translate3d(0, 5%, 0);
+    transform: translate3d(0, 0, 0);
   }
   to {
     opacity: 1;
     transform: translateZ(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(3%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+@media screen and (max-width : 1200px) {
+  .openTabVertical .tab {
+    width: 100px;
+    left: 0;
+  }
+  .tabButton {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .tabButton:nth-child(1) {
+    font-size: 22px;
+  }
+  .tabButton.on {
+    text-decoration: none;
+  }
+  .openTabVertical .contents {
+    height: 70vh;
+  }
+  .contents .tabBox {
+    padding: 100px 60px;
+  }
+  .AboutBox {
+    gap: 0;
+  }
+  .home h2:first-child {
+    width: 215px;
+    height: 22px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .home h2:last-child {
+    width: 335px;
+    height: 28px;
+    font-size: 28px;
+  }
+  .AboutBox div ul {
+    display: flex;
+    gap: 20px;
+  }
+  .AboutBox div ul li img {
+    width: 40px;
+    height: 40px;
+  }
+  .tabButton2 {
+    font-size: 34px;
+  }
+  .tabBox2.on {
+    gap: 60px;
+  }
+  .web .web-con {
+    gap: 100px;
+  }
+  .web .web-con .web-txt {
+    width: 38%;
+    font-size: 16px;
+  }
+  .web .web-con .web-txt li {
+    gap: 20px;
+    padding: 5px;
+  }
+  .web .web-con .web-txt p {
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  .web-txt-box li{
+    display: flex;
+    justify-content: space-between;
+  }
+  .web-txt-box li span{
+    width: 48%;
+  }
+  .web .web-img {
+    width: 50%;
+  }
+  .web-img .tabButton3 h2 {
+    font-size: 24px;
+    padding-bottom: 15px;
+  }
+  .web-img .tabBox3 {
+    height: 150px;
+  }
+  .web-img a img {
+    height: 150px;
+  }
+  .web-img:hover a img {
+    height: 150px;
+  }
+  .web-img a img:hover {
+    transition: all 1s;
+  }
+  .tabBox:last-child .me-box {
+    gap: 80px;
+    padding-top: 80px;
+  }
+  .me-box li span {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width : 768px) {
+  .openTabVertical {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .openTabVertical .tab {
+    width: 75%;
+    flex-direction: row;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 0);
+  }
+  .tabButton {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 15px 0;
+    align-self: center;
+  }
+  .tabButton:nth-child(1) {
+    font-size: 20px;
+  }
+  .openTabVertical .contents {
+    height: 80vh;
+  }
+  .contents .tabBox {
+    padding: 60px 10px;
+  }
+  .AboutBox {
+    gap: 1%;
+  }
+  .home h2:first-child {
+    width: 180px;
+    height: 18px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .home h2:last-child {
+    width: 250px;
+    height: 20px;
+    font-size: 20px;
+  }
+  .AboutBox-l {width: 100%;}
+  .AboutBox-l .skill-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .AboutBox div ul {
+    justify-content: space-between;
+    gap: 0;
+  }
+  .AboutBox div ul li img {
+    width: 34px;
+    height: 34px;
+  }
+  .AboutBox-r{
+    position: absolute;
+    z-index: -5;
+    left: 0;
+    bottom: 130px;
+  }
+  .web .web-con {
+    gap: 50px;
+  }
+  .web .web-tit {
+    justify-content: center;
+    gap: 5%;
+  }
+  .tabButton2 {
+    font-size: 24px;
+  }
+  .tabButton2.on {
+    text-underline-offset: 5px;
+  }
+  .tabBox:nth-child(2){
+    padding-bottom: 0;
+  }
+  .tabBox2.on {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .web .web-con .web-txt {
+    width: 90%;
+    font-size: 16px;
+  }
+  .web .web-con .web-txt p {
+    color: #333;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  .web .web-con .web-txt li {
+    justify-content: space-between;
+    padding: 5px;
+  }
+  .web .web-con .web-txt li h3 {
+    font-size: 16px;
+  }
+  .web .web-con .web-txt .web-txt-box li:first-child h3 {
+    width: 90px;
+  }
+  .web .web-con .web-txt li span {
+    font-size: 12px;
+  }
+
+  .web .web-con .web-btn {
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .web .web-con .web-btn li {
+    width: 40%;
+  }
+  .web .web-con .web-btn li a {
+    padding: 10px 0;
+  }
+  .web .web-con .web-btn li a span {
+    font-size: 16px;
+  }
+
+  .web .web-img {
+    width: 80%;
+  }
+  .web-img .tabButton3{
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+  }
+  .web-img .tabButton3 h2 {
+    width: 48%;
+    height: 35px;
+    font-size: 18px;
+  }
+  .web-img .tabButton3.on i {
+    font-weight: 400;
+  }
+  .web-img .tabBox3 {
+    width: 48%;
+    height: 60px;
+  }
+  .web-img a img {
+    height: 100px;
+    transition: all 0.5s;
+  }
+  .web-img:hover a img {
+    height: 60px;
+  }
+  .web-img a img:hover {
+    transition: all 1.0s;
+  }
+  .tabBox2:nth-child(2) .web-img a .mid-img {
+    transition: all 2.5s;
+  }
+  .tabBox2:nth-child(3) .web-img a .mid-img {
+    transition: all 2.5s;
+  }
+  .tabBox2:nth-child(3) .web-img a .long-img {
+    transition: all 4s;
+  }
+  .tabBox:last-child .me-box {
+    gap: 100px;
+  }
+  .me-box li i {
+    font-size: 150px;
+  }
+  .me-box li span {
+    font-size: 24px;
   }
 }

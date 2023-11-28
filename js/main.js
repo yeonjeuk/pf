@@ -12,7 +12,30 @@ Array.from(tabButtons).forEach((eachButton, index) => {
 });
 tabButtons[0].click();
 
-const concept = document.querySelector('.concept-click');
-concept.onclick = function () {
-  window.open(this.href, '_blank', 'width=800, height=600'); return false;;
-};
+let tabButtons2 = document.querySelectorAll('.tabButton2');
+Array.from(tabButtons2).forEach((eachButton, index) => {
+  eachButton.addEventListener('click', function () {
+    let tabBoxs2 = document.querySelectorAll('.tabBox2');
+    for (var i = 0; i < tabBoxs2.length; i++) {
+      tabBoxs2[i].classList.remove("on");
+      tabButtons2[i].classList.remove("on");
+    }
+    tabBoxs2[index].classList.add("on");
+    this.classList.add("on");
+  });
+});
+tabButtons2[0].click();
+
+let tabButtons3 = document.querySelectorAll('.tabButton3');
+Array.from(tabButtons3).forEach((eachButton, index) => {
+  eachButton.addEventListener('click', function () {
+    let tabBoxs3 = document.querySelectorAll('.tabBox3');
+    for (var i = 0; i < tabBoxs3.length; i++) {
+      tabBoxs3[i].classList.remove("on");
+      tabButtons3[i].classList.remove("on");
+    }
+    tabBoxs3[index].classList.add("on");
+    this.classList.add("on");
+  });
+});
+tabButtons3[0].click();
