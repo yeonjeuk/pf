@@ -546,9 +546,7 @@ body {
     font-size: 16px;
   }
   .web .web-con .web-txt p {
-    color: #333;
-    line-height: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   .web .web-con .web-txt li {
     justify-content: space-between;
