@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 body {
-  background: url(/pf/img/overlay.gif) no-repeat center center / cover
+  background: url(/img/overlay.gif) no-repeat center center / cover
 }
 .openTabVertical {
   width: 100%;
@@ -109,28 +109,28 @@ body {
   overflow: hidden;
   animation: type2 1.8s steps(40, end) 2s forwards, blink .5s step-end infinite alternate;
 }
-.home div {
+.home .home-box {
   padding: 100px 0;
 }
-.home div span {
+.home .home-box span {
   display: block;
   font-size: 20px;
   line-height: 40px;
   height: 40px;
 }
-.home div span:nth-child(1) {
+.home .home-box span:nth-child(1) {
   opacity: 0;
   width: 320px;
   overflow: hidden;
   animation: type2 1.8s steps(40, end) 4s forwards
 }
-.home div span:nth-child(2) {
+.home .home-box span:nth-child(2) {
   opacity: 0;
   width: 450px;
   overflow: hidden;
   animation: type2 1.8s steps(40, end) 6s forwards
 }
-.home div span:nth-child(3) {
+.home .home-box span:nth-child(3) {
   opacity: 0;
   width: 400px;
   overflow: hidden;
