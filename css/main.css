@@ -355,6 +355,9 @@ body {
 .me-box li span {
   font-size: 40px;
 }
+.Profile {
+  width: 100vw;
+}
 @keyframes type {
   0% {
     width: 0;
