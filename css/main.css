@@ -451,21 +451,21 @@ body {
     height: 28px;
     font-size: 28px;
   }
-  .home div {
+  .home .home-box {
     padding: 80px 0;
   }
-  .home div span {
+  .home .home-box span {
     font-size: 18px;
     line-height: 30px;
     height: 30px;
   }
-  .home div span:nth-child(1) {
+  .home .home-box span:nth-child(1) {
     width: 280px;
   }
-  .home div span:nth-child(2) {
+  .home .home-box span:nth-child(2) {
     width: 410px;
   }
-  .home div span:nth-child(3) {
+  .home .home-box span:nth-child(3) {
     width: 360px;
   }
   .Profile-click {
@@ -583,24 +583,24 @@ body {
     height: 20px;
     font-size: 20px;
   }
-  .home div {
+  .home .home-box {
     padding: 40px 0 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  .home div span {
+  .home .home-box span {
     font-size: 13px;
     line-height: 20px;
     height: 20px;
   }
-  .home div span:nth-child(1) {
+  .home .home-box span:nth-child(1) {
     width: 210px;
   }
-  .home div span:nth-child(2) {
+  .home .home-box span:nth-child(2) {
     width: 290px;
   }
-  .home div span:nth-child(3) {
+  .home .home-box span:nth-child(3) {
     width: 260px;
   }
   .Profile-click {
