@@ -39,3 +39,8 @@ Array.from(tabButtons3).forEach((eachButton, index) => {
   });
 });
 tabButtons3[0].click();
+
+const Profile = document.querySelector('.Profile-click');
+Profile.onclick = function () {
+  window.open(this.href, '_blank', 'width=800, height=600'); return false;;
+};

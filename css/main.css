@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 body {
-  background: url(/pf/img/overlay.gif) no-repeat center center / cover;
+  background: url(/pf/img/overlay.gif) no-repeat center center / cover
 }
 .openTabVertical {
   width: 100%;
@@ -91,7 +91,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.home h2:first-child {
+.home h2:nth-child(1) {
   width: 290px;
   height: 28px;
   font-size: 28px;
@@ -100,7 +100,7 @@ body {
   overflow: hidden;
   animation: type 1.3s steps(40, end) forwards;
 }
-.home h2:last-child {
+.home h2:nth-child(2) {
   opacity: 0;
   width: 480px;
   height: 42px;
@@ -108,6 +108,53 @@ body {
   font-size: 40px;
   overflow: hidden;
   animation: type2 1.8s steps(40, end) 2s forwards, blink .5s step-end infinite alternate;
+}
+.home div {
+  padding: 100px 0;
+}
+.home div span {
+  display: block;
+  font-size: 20px;
+  line-height: 40px;
+  height: 40px;
+}
+.home div span:nth-child(1) {
+  opacity: 0;
+  width: 320px;
+  overflow: hidden;
+  animation: type2 1.8s steps(40, end) 4s forwards
+}
+.home div span:nth-child(2) {
+  opacity: 0;
+  width: 450px;
+  overflow: hidden;
+  animation: type2 1.8s steps(40, end) 6s forwards
+}
+.home div span:nth-child(3) {
+  opacity: 0;
+  width: 400px;
+  overflow: hidden;
+  animation: type2 1.8s steps(40, end) 8s forwards
+}
+.Profile-click {
+  display: block;
+  width: 200px;
+  height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 80px;
+  color: #000;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.Profile-click:hover {
+  background: #222;
+  transition: all 0.3s;
+  color: #fff;
 }
 .AboutBox-l .skill-box h2 {
   font-weight: 700;
@@ -122,6 +169,17 @@ body {
 .AboutBox div ul li img {
   width: 40px;
   height: 40px;
+}
+.AboutBox-r {
+  position: absolute;
+  z-index: -1;
+  right: 5%;
+  top: 10%;
+  width: 450px;
+  height: 675px;
+}
+.AboutBox-r img {
+  width: 100%;
 }
 .tabBox.on .web {
   animation: fadeInUp 0.5s steps(40, end) forwards
@@ -382,16 +440,39 @@ body {
   .AboutBox {
     gap: 0;
   }
-  .home h2:first-child {
+  .home h2:nth-child(1) {
     width: 215px;
     height: 22px;
     font-size: 22px;
     line-height: 22px;
   }
-  .home h2:last-child {
+  .home h2:nth-child(2) {
     width: 335px;
     height: 28px;
     font-size: 28px;
+  }
+  .home div {
+    padding: 80px 0;
+  }
+  .home div span {
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+  }
+  .home div span:nth-child(1) {
+    width: 280px;
+  }
+  .home div span:nth-child(2) {
+    width: 410px;
+  }
+  .home div span:nth-child(3) {
+    width: 360px;
+  }
+  .Profile-click {
+    width: 180px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 60px;
   }
   .AboutBox div ul {
     display: flex;
@@ -400,6 +481,11 @@ body {
   .AboutBox div ul li img {
     width: 40px;
     height: 40px;
+  }
+  .AboutBox-r {
+    right: 3%;
+    top: 20%;
+    width: 300px;
   }
   .tabButton2 {
     font-size: 34px;
@@ -486,16 +572,43 @@ body {
   .AboutBox {
     gap: 1%;
   }
-  .home h2:first-child {
+  .home h2:nth-child(1) {
     width: 180px;
     height: 18px;
     font-size: 18px;
     line-height: 18px;
   }
-  .home h2:last-child {
+  .home h2:nth-child(2) {
     width: 250px;
     height: 20px;
     font-size: 20px;
+  }
+  .home div {
+    padding: 40px 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .home div span {
+    font-size: 13px;
+    line-height: 20px;
+    height: 20px;
+  }
+  .home div span:nth-child(1) {
+    width: 210px;
+  }
+  .home div span:nth-child(2) {
+    width: 290px;
+  }
+  .home div span:nth-child(3) {
+    width: 260px;
+  }
+  .Profile-click {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    margin: 0 auto;
+    line-height: 40px;
   }
   .AboutBox-l {
     width: 100%;
@@ -513,10 +626,10 @@ body {
     height: 34px;
   }
   .AboutBox-r {
-    position: absolute;
-    z-index: -5;
-    left: 0;
-    bottom: 130px;
+    right: 50%;
+    top: 260px;
+    height: 450px;
+    transform: translate(50%, 0);
   }
   .web .web-con {
     gap: 20px;
