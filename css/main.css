@@ -3,8 +3,7 @@
   box-sizing: border-box;
 }
 body {
-  background: rgb(92, 92, 99);
-  background: linear-gradient(35deg, rgba(92, 92, 99, 1) 0%, rgba(152, 143, 143, 1) 33%, rgba(92, 92, 99, 1) 100%);
+  background: url(/pf/img/overlay.gif) no-repeat center center / cover;
 }
 .openTabVertical {
   width: 100%;
