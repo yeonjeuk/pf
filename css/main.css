@@ -466,7 +466,7 @@ body {
     width: 75%;
     flex-direction: row;
     left: 50%;
-    top: 5%;
+    top: 7%;
     transform: translate(-50%, 0);
   }
   .tabButton {
