@@ -644,7 +644,7 @@ body {
   .AboutBox-r {
     z-index: 5;
     right: 50%;
-    top: 260px;
+    top: 220px;
     height: 450px;
     transform: translate(50%, 0);
   }
