@@ -293,7 +293,7 @@ body {
 .web-img .tabButton3 + .tabButton3 {
   padding-top: 20px;
 }
-.web-img .tabButton3 h2 {
+.web-img .tabTit {
   display: flex;
   justify-content: space-between;
   font-weight: 700;
@@ -301,7 +301,7 @@ body {
   padding-bottom: 20px;
   cursor: pointer;
 }
-.web-img .tabButton3.on h2 {
+.web-img .tabButton3.on .tabTit {
   border-bottom: 5px solid #8cb8d4;
   color: #9fc4db;
 }
@@ -316,6 +316,46 @@ body {
   display: none;
 }
 .web-img .tabBox3.on {
+  display: block;
+}
+.web-img .tabButton4 + .tabButton4 {
+  padding-top: 20px;
+}
+.web-img .tabButton4.on .tabTit {
+  border-bottom: 5px solid #8cb8d4;
+  color: #9fc4db;
+}
+.web-img .tabButton4.on i {
+  font-weight: 700;
+  transform: rotate(180deg);
+  color: #9fc4db;
+}
+.web-img .tabBox4 {
+  height: 200px;
+  overflow: hidden;
+  display: none;
+}
+.web-img .tabBox4.on {
+  display: block;
+}
+.web-img .tabButton5 + .tabButton5 {
+  padding-top: 20px;
+}
+.web-img .tabButton5.on .tabTit {
+  border-bottom: 5px solid #8cb8d4;
+  color: #9fc4db;
+}
+.web-img .tabButton5.on i {
+  font-weight: 700;
+  transform: rotate(180deg);
+  color: #9fc4db;
+}
+.web-img .tabBox5 {
+  height: 200px;
+  overflow: hidden;
+  display: none;
+}
+.web-img .tabBox5.on {
   display: block;
 }
 .web-img a img {
@@ -532,11 +572,17 @@ body {
   .web .web-img {
     width: 50%;
   }
-  .web-img .tabButton3 h2 {
+  .web-img .tabTit {
     font-size: 18px;
     padding-bottom: 15px;
   }
   .web-img .tabBox3 {
+    height: 150px;
+  }
+  .web-img .tabBox4 {
+    height: 150px;
+  }
+  .web-img .tabBox5 {
     height: 150px;
   }
   .web-img a img {
@@ -710,7 +756,7 @@ body {
     justify-content: space-between;
     gap: 4%;
   }
-  .web-img .tabButton3 h2 {
+  .web-img .tabTit {
     width: 48%;
     height: 35px;
     font-size: 18px;
@@ -719,6 +765,30 @@ body {
     font-weight: 400;
   }
   .web-img .tabBox3 {
+    width: 48%;
+    height: 60px;
+  }
+  .web-img .tabButton4 {
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+  }
+  .web-img .tabButton4.on i {
+    font-weight: 400;
+  }
+  .web-img .tabBox4 {
+    width: 48%;
+    height: 60px;
+  }
+  .web-img .tabButton5 {
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+  }
+  .web-img .tabButton5.on i {
+    font-weight: 400;
+  }
+  .web-img .tabBox5 {
     width: 48%;
     height: 60px;
   }
